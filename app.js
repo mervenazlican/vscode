@@ -10,7 +10,7 @@ serveR.listen(3000)
 app.use("/data",(req,res,next) => {
     fs.readFile(dir +"/turkiye.json",(err,json) => {
         if(err){
-            res.send("Okunmadı")
+            res.send("Okunmadı..")
         }else{
             res.send(JSON.parse(json))
         }
